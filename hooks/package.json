@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "chardet": "^2.1.1",
+    "dotenv": "^17.3.1",
+    "node-notifier": "^10.0.1",
+    "reverse-line-reader": "^0.2.6"
+  }
+}
