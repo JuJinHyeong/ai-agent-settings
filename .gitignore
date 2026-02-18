@@ -210,3 +210,4 @@ __marimo__/
 .gemini
 .omc
 *.exe
+node_modules/

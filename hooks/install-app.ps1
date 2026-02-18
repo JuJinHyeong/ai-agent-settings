@@ -5,12 +5,19 @@ $appId = $args[2]
 $snoreToastPath = "$currentDir\node_modules\node-notifier\vendor\snoreToast\snoretoast-x64.exe"
 $executablePath = "$currentDir\$type-notifier.exe"
 
+Write-Host "Dummy app 생성 시작..."
+Push-Location $currentDir\notify-app
+& $currentDir\notify-app\build-app.ps1 $type
+Pop-Location
+Write-Host "Dummy app 생성 종료. $type-notifier.exe 를 확인해주세요."
+
 if (Test-Path $snoreToastPath) {
     Write-Host "snoreToast.exe 경로 확인: $snoreToastPath"
 } else {
     Write-Host "snoreToast.exe를 찾을 수 없습니다. 경로를 확인하세요: $snoreToastPath"
     exit
 }
+
 if (Test-Path $executablePath) {
     Write-Host "알림 실행 파일 경로 확인: $executablePath"
 } else {
